@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Genres</title>
+  {%load static%}
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+        <link rel="stylesheet" href="{%static 'css/index.css'%}">
+  <link rel="stylesheet" href="{%static 'css/genre.css'%}">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="container">
+        <a class="navbar-brand" href="index.html">
+            <img src="{%static 'images/favicon (2).ico'%}" alt="Story Yard" width="60" height="60" class="d-inline-block align-text-top">
+        </a>
+        <div class="right_nav">
+            <form class="d-flex" role="search">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+            <a class="buttons" href="login.html">Log In</a>
+        </div>
+    </div>
+</nav>
+
+<div id="body" class="body1">
+    <h1>Fantasy</h1>
+  <input type="radio" name="position" checked />
+  <input type="radio" name="position" />
+  <input type="radio" name="position" />
+  <input type="radio" name="position" />
+  <input type="radio" name="position" />
+  <main id="carousel">
+       <div class="item"></a></div>
+      <div class="item"></div>
+      <div class="item"></div>
+      <div class="item"></div>
+      <div class="item"></div>
+    </div>
+  <div id="body"class="body2">
+    <h1>Poetry</h1>
+  <input type="radio" name="position" checked />
+  <input type="radio" name="position" />
+  <input type="radio" name="position" />
+  <input type="radio" name="position" />
+  <input type="radio" name="position" />
+  <main id="carousel">
+    <div class="item"></div>
+    <div class="item"></div>
+    <div class="item"></div>
+    <div class="item"></div>
+    <div class="item"></div>
+  </div>
+  <div id="body"class="body2">
+    <h1>Mystery</h1>
+    <input type="radio" name="position" checked />
+    <input type="radio" name="position" onclick="window.location.href='post.html';"/>
+    <input type="radio" name="position" />
+    <input type="radio" name="position" />
+    <input type="radio" name="position" />
+    <main id="carousel">
+      <div class="item"></div>
+      <div class="item"></div>
+      <div class="item"></div>
+      <div class="item"></div>
+      <div class="item"></div>
+    </div>
+    <div id="button">
+      <div id="clock" onload="CurrentTime()"></div>
+  </div>
+  <script src="{%static 'js/post.css'%}"> </script>
+  </body>
+
+</html>

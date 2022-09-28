@@ -1,0 +1,212 @@
+:root {
+    --color-1: #771011;
+    --color-2: #221712;
+    --color-3: #6F635B;
+    --color-4: #ECE6D3;
+    --color-5: #C0BFB2;
+}
+
+#body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px;
+}
+
+.body {
+    height: 600px;
+    margin: 0;
+    display: grid;
+    grid-template-rows: 500px 100px;
+    grid-template-columns: 1fr 30px 30px 30px 30px 30px 1fr;
+    align-items: center;
+    justify-items: center;
+}
+
+main#carousel {
+    grid-row: 1 / 2;
+    grid-column: 1 / 8;
+    width: 100vw;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transform-style: preserve-3d;
+    perspective: 600px;
+    --items: 5;
+    --middle: 3;
+    --position: 1;
+    pointer-events: none;
+}
+
+div.item {
+    position: absolute;
+    width: 300px;
+    height: 400px;
+    background-color: coral;
+    text-decoration: none;
+    --r: calc(var(--position) - var(--offset));
+    --abs: max(calc(var(--r) * -1), var(--r));
+    transition: all 0.25s linear;
+    transform: rotateY(calc(-10deg * var(--r))) translateX(calc(-300px * var(--r)));
+    z-index: calc((var(--position) - var(--abs)));
+}
+
+a .iteam {
+    text-decoration: none;
+}
+
+div.item:nth-of-type(1) {
+    --offset: 1;
+    background-color: #90f1ef;
+    background-image: url(../images/mystery.jpg);
+
+}
+
+div.item:nth-of-type(2) {
+    --offset: 2;
+    background-color: #ff70a6;
+    background-image: url(../images/fantasy.jpg);
+
+
+
+}
+
+div.item:nth-of-type(3) {
+    --offset: 3;
+    background-color: #130500;
+    background-image: url(../images/mystery.jpg);
+
+}
+
+div.item:nth-of-type(4) {
+    --offset: 4;
+    background-color: #ffd670;
+    background-image: url(../images/fantasy.jpg);
+
+
+
+}
+
+div.item:nth-of-type(5) {
+    --offset: 5;
+    background-color: #e9ff70;
+    background-image: url(../images/mystery.jpg);
+
+}
+
+
+input:nth-of-type(1) {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+}
+
+input:nth-of-type(1):checked~main#carousel {
+    --position: 1;
+}
+
+input:nth-of-type(2) {
+    grid-column: 3 / 4;
+    grid-row: 2 / 3;
+}
+
+input:nth-of-type(2):checked~main#carousel {
+    --position: 2;
+}
+
+input:nth-of-type(3) {
+    grid-column: 4 /5;
+    grid-row: 2 / 3;
+}
+
+input:nth-of-type(3):checked~main#carousel {
+    --position: 3;
+}
+
+input:nth-of-type(4) {
+    grid-column: 5 / 6;
+    grid-row: 2 / 3;
+}
+
+input:nth-of-type(4):checked~main#carousel {
+    --position: 4;
+}
+
+input:nth-of-type(5) {
+    grid-column: 6 / 7;
+    grid-row: 2 / 3;
+}
+
+input:nth-of-type(5):checked~main#carousel {
+    --position: 5;
+}
+
+.navbar {
+    justify-content: space-around;
+}
+
+h1 {
+    color: var(--color-4);
+}
+
+.body1,
+.body2,
+.body3 {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url(../images/fantasy.jpg);
+}
+
+a.fill-div {
+    display: block;
+    height: 100%;
+    width: 100%;
+    text-decoration: none;
+}
+#clock,#button{
+    position: fixed; 
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 50px;
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+#button{
+    background-color: #854e4e;
+    max-width: 10ch;
+    border: none;
+    color: white;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+   animation: animates infinite ease-in 5s;
+  }
+
+  #button:hover {
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+  }
+  @keyframes animates {
+
+    0% {
+        background-color: #854e4e;
+    }
+    15% {
+        background-color: rgb(2, 37, 37);
+    }30% {
+        background-color: rgb(4, 13, 53);
+    }45% {
+        background-color: rgb(63, 35, 88);
+    }60% {
+        background-color: rgb(80, 16, 16);
+    }75% {
+        background-color: rgb(14, 44, 19);
+    }90% {
+        background-color: rgb(56, 85, 19);
+    }100% {
+        background-color: rgb(136, 134, 0);
+    }
+
+}

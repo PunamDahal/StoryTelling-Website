@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StoryYard</title>
+  {%load static%}
+
+  <link rel="stylesheet" href="{%static 'images/favicon (2).ico'%}" type="image/x-icon" sizes="32px">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="{%static 'css/storyyard.css'%}">
+
+</head>
+
+<body>
+  <section class="hero">
+    <section class="hero">
+      <nav class="navbar">
+          <div class="container">
+              <a class="navbar-brand" href="index.html">
+                  <img src="{%static 'images/favicon (2).ico'%}" alt="Story Yard" width="60" height="60" class="d-inline-block align-text-top">
+              </a>
+              <div class="right_nav">
+                  <form class="d-flex" role="search">
+                      <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                      <button class="btn btn-outline-success" type="submit">Search</button>
+                  </form>
+                  <a class="buttons" href="login.html">Log In</a>
+              </div>
+          </div>
+      </nav>
+    <header>
+      <div id="arrow-up" class="arrow"></div>
+      <div class="slide slide1"></div>
+      <div class="slide slide2"></div>
+      <div class="slide slide3"></div>
+      <div class="slide slide4"></div>
+      <div id="arrow-down" class="arrow"></div>
+      <div class="content">
+        <div class="content__slide content__slide_slide1">
+          <h2 class="title"> Poetry</h2>
+          <p> In here runs my imagination;<br/>
+            sometimes like a tiny dewdrop<br/>
+            and othertimes like avalanche...
+          <div><a class="button" href="genre.html">Start Reading</a></div>
+        </div>
+        <div class="content__slide content__slide_slide2">
+          <h2 class="title"> FANTASY</h2>
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.<br/> Repellat quibusdam culpa ipsam suscipit a.
+            Explicabo in, beatae sint minus excepturi eaque, <br/>facilis repellat sequi vel recusandae, perspiciatis
+            asperiores nemo dolorum.</p>
+          <div><a class="button" href="genre.html">Start Reading</a></div>
+        </div>
+        <div class="content__slide content__slide_slide3">
+          <h2 class="title"> Mystery</h2>
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.<br/> Repellat quibusdam culpa ipsam suscipit a.
+            Explicabo in, beatae sint minus excepturi eaque, <br/>facilis repellat sequi vel recusandae, perspiciatis
+            asperiores nemo dolorum.</p>
+          <div><a class="button" href="genre.html">Start Reading</a></div>
+        </div>
+        <div class="content__slide content__slide_slide4">
+          <h2 class="title"> YOUNG ADULT</h2>
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. <br/>Repellat quibusdam culpa ipsam suscipit a.
+            Explicabo in, beatae sint minus excepturi eaque, <br/>facilis repellat sequi vel recusandae, perspiciatis
+            asperiores nemo dolorum.</p>
+          <div><a class="button" href="genre.html">Start Reading</a></div>
+        </div>
+      </div>
+  </section>
+  <div id="button">
+    <div id="clock" onload="CurrentTime()"></div>
+</div>
+<script src="{%static 'js/post.js'%}"> </script>
+
+  <script src="{%static 'js/storyyard.js'%}"></script>
+
+
+</body>
+
+</html>
